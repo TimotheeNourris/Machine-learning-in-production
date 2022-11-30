@@ -39,6 +39,7 @@ jobs:
         python -m unittest
         
   extract_to_docker:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       -
