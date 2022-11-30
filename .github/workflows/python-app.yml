@@ -51,6 +51,6 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
     - name: Build the Docker image # push The image to the docker hub
-      run: docker build . --file ./Machine-learning-in-production/Dockerfile --tag timotheenourriscli/cli_with_git:${{ steps.date.outputs.date }}
+      run: docker build . --tag timotheenourriscli/cli_with_git:${{ steps.date.outputs.date }}
     - name: Docker Push
       run: docker push timotheenourriscli/cli_with_git
