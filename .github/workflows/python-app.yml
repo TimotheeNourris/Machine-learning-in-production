@@ -39,6 +39,7 @@ jobs:
         python -m unittest
         
   push-image-to-docker-hub:  # job name
+    needs : build
     runs-on: ubuntu-latest  # runner name : (ubuntu latest version) 
     steps:
     - uses: actions/checkout@v2 # first action : checkout source code
